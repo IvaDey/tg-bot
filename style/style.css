@@ -1,0 +1,318 @@
+body {
+    background-color: #edeef0;
+}
+
+#wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav {
+    width: 30%;
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+nav h2 {
+    margin: 0;
+    padding: 10px 15px;
+    border-bottom: solid 1px #000000;
+}
+
+nav .navigation-box {
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+nav .screenLabel {
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+nav .screenLabel:hover {
+    background-color: #f5e4e4;
+    transition: all 0.3s ease 0s;
+}
+
+nav .screenLabel.selected {
+    background-color: #f5e4e4;
+}
+
+nav button {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #612020;
+    background-color: #d4c5c5;
+    transition: all 0.5s ease 0s;
+}
+
+nav button:hover {
+    color: #612020;
+    background-color: #ffa0a0;
+    transition: all 0.5s ease 0s;
+}
+
+#main {
+    width: calc(70% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+#main h2 {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+#control-panel {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#main .control-buttons {
+    outline: none;
+    border: solid 1px #000000;
+    font-size: 18px;
+    padding: 7px 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+    #saveBtn, #cancelBtn, #deleteBtn {
+        display: none;
+    }
+
+    #deleteBtn {
+        margin-left: 70px;
+        background-color: #d4c5c5;
+        color: black;
+        border: none !important;
+        font-weight: 700;
+    }
+
+    #deleteBtn:hover {
+        background-color: red !important;
+        color: white;
+    }
+
+#main .control-buttons:hover {
+    background-color: #d4c5c5;
+    transition: all 0.5s ease 0s;
+}
+
+#main span {
+    font-size: 18px;
+    width: 140px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.screen-name-edit {
+    display: none;
+}
+
+#main input, #main textarea {
+    width: calc(100% - 160px);
+    background-color: #edeef0;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    cursor: default;
+}
+
+#main textarea {
+    resize: none;
+    overflow: scroll;
+    height: 240px;
+    font-size: 16px;
+}
+
+#main .onEdit {
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    cursor: text;
+}
+
+#main #keyboard {
+    width: 100%;
+}
+
+#main #keyboard ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#keyboard ul.onEdit {
+    padding: 10px 15px !important;
+    box-sizing: border-box;
+    background-color: #aaaaaa;
+    cursor: default;
+}
+
+#keyboard ul.onEdit li {
+    cursor: move !important;
+}
+
+#main #keyboard ul li{
+    width: calc(100%/4 - 10px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+#main #keyboard #addButton {
+    display: none;
+    outline: none;
+    background-image: url("../images/black-plus.png");
+    background-size: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 32px;
+    width: 48px;
+    position: relative;
+    left: calc(50% - 24px);
+    height: 48px;
+    padding: 0;
+    box-sizing: border-box;
+    border: solid 1px #000000;
+    cursor: pointer;
+    border-radius: 24px;
+    transition: all 0.5s ease 0s;
+}
+
+#main #keyboard #addButton:hover {
+    background-color: #d4c5c5;
+    transition: all 0.5s ease 0s;
+}
+
+#button-settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#button-settings span {
+    width: 180px;
+    padding: 10px 15px;
+}
+
+#button-settings input, #button-settings select, #button-settings textarea {
+    outline: none;
+    width: 360px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+#button-settings select {
+    margin-top: 10px;
+}
+
+#button-settings textarea {
+    resize: none;
+    height: 100px;
+    overflow: scroll;
+}
+
+#button-info textarea {
+    resize: none;
+    padding: 0;
+    width: 100%;
+    height: 360px;
+    outline: none;
+    border: none;
+    overflow: scroll;
+}
+
+#button-go-next-step {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#button-go-next-step span {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+/*#button-go-next-step textarea {*/
+    /*resize: none;*/
+    /*padding: 5px;*/
+    /*margin: 15px 0;*/
+    /*width: 100%;*/
+    /*height: 360px;*/
+    /*outline: none;*/
+    /*border: dashed 1px #000000;*/
+    /*overflow: scroll;*/
+/*}*/
+
+#button-go-next-step p {
+    padding: 10px;
+    padding-left: 20px;
+    margin: 15px 0;
+    width: 100%;
+    border: none;
+    background-color: antiquewhite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

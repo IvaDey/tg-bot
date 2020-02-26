@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/jquery-ui.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/action.js"></script>
+    <title>Конструктор чат ботов</title>
+</head>
+<body>
+<div id="wrap">
+
+    <nav>
+        <h2>Навигация</h2>
+        <div class="navigation-box">
+            <div class="screenLabel selected" data-screen-number="0">Главный экран</div>
+        </div>
+        <button>Добавить экран</button>
+    </nav>
+
+    <div id="main">
+        <h2>Главный экран</h2>
+        <div id="control-panel">
+            <button id="editBtn" class="control-buttons">Изменить</button>
+            <button id="saveBtn" class="control-buttons">Сохранить</button>
+            <button id="cancelBtn" class="control-buttons">Отменить</button>
+            <button id="deleteBtn" class="control-buttons">Удалить ступень</button>
+        </div>
+
+        <span class="screen-name-edit">Название экрана: </span>
+        <input id="screenName" type="text" placeholder="Название экрана" class="screen-name-edit onEdit">
+
+        <span>Сообщение: </span>
+        <textarea id="screenMessage" placeholder="Сообщение-вопрос для пользователя" readonly></textarea>
+
+        <div id="keyboard">
+            <h3>Клавиатура</h3>
+
+            <button id="addButton"></button>
+        </div>
+    </div>
+
+</div>
+
+<div id="button-settings" title="Свойства кнопки">
+    <span>Название:</span><input id="btnCaption" type="text" value="Новая кнопка">
+    <span>Ответное сообщение:</span><textarea id="btnReply"></textarea>
+    <span>Следующий экран:</span><select id="btnNextScreen"></select>
+</div>
+
+<div id="button-info" title="Свойства">
+    <h3>Ответное сообщение на нажатие:</h3>
+    <textarea readonly></textarea readonly>
+</div>
+
+<div id="button-go-next-step" title="Some title">
+    <span>Ответное сообщение на нажатие:</span>
+    <!--<textarea readonly></textarea>-->
+    <p></p>
+    <span id="ui-dialog-next-step"></span>
+</div>
+</body>
+</html>
